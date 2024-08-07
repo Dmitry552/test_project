@@ -1,0 +1,86 @@
+.welcome {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    &__image {
+        height: 100%;
+        border-radius: 48px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &__text_block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 520px;
+            margin-left: 8%;
+            h1 {
+                font-size: 60px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                color: white;
+                margin-bottom: 32px;
+            }
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                color: white;
+                margin-bottom: 72px;
+            }
+            &__btn {
+                display: flex;
+                align-items: center;
+                padding: 12px 32px 12px 32px;
+                border-radius: 8px;
+                background: white;
+                border: none;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 20px;
+                color: #2D2E2E;
+                cursor: pointer;
+                img {
+                    height: 14px;
+                    margin-left: 4px;
+                    transform: translateX(0);
+                    transition: transform 0.7s ease;
+                }
+            }
+            &__btn:hover {
+                img {
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1980px) {
+    .welcome {
+        &__image {
+            background-position: right center;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .welcome {
+        &__text_block {
+            justify-content: center;
+            .text {
+                margin-left: 0;
+                align-items: center;
+            }
+        }
+    }
+}

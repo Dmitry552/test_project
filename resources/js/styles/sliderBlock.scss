@@ -1,0 +1,73 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1650px;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-size: 44px;
+            font-weight: 500;
+            line-height: 64px;
+            letter-spacing: 1px;
+        }
+        button {
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18px;
+            padding: 16px;
+            border-radius: 8px;
+            border: solid 1px #474B56;
+            background: white;
+        }
+    }
+    .slider {
+        width: 100%;
+        margin-top: 160px;
+        margin-bottom: 80px;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    //
+    .swiper-slide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: none;
+    }
+
+    .swiper-button-prev {
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        border: solid 1px #0C93F4;
+        border-radius: 8px;
+    }
+    .swiper-button-prev::after {
+        font-size: 10px;
+        color: #2D2E2E;
+    }
+    .swiper-button-next {
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        border: solid 1px #0C93F4;
+        border-radius: 8px;
+    }
+    .swiper-button-next::after {
+        font-size: 10px;
+        color: #2D2E2E;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper {
+        .top {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

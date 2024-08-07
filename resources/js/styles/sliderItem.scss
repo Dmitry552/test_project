@@ -1,0 +1,89 @@
+.wrapper {
+    border: none;
+    background: none;
+    padding: 40px;
+    .card {
+        display: flex;
+        align-items: center;
+        img {
+            height: 367px;
+        }
+        &__text {
+            margin-left: 65px;
+            &__rating {
+                display: flex;
+                img {
+                    margin-right: 5px;
+                    margin-bottom: 27px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            &__cookie {
+                display: flex;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                .name {
+                    color: #929292;
+                    padding-right: 12px;
+                    border-right: solid 1px #D0D9EE;
+                }
+                .position {
+                    color: #929292;
+                    margin-left: 12px;
+                }
+            }
+        }
+        h3 {
+            font-family: 'RobotoCondensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 48px;
+            color: #2D2E2E;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #2D2E2E;
+            margin-bottom: 24px;
+            max-width: 512px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        .card {
+            flex-direction: column;
+            img {
+                margin-bottom: 20px;
+            }
+            &__text {
+                margin-left: 0;
+                &__rating {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .wrapper {
+        .card {
+            flex-direction: column;
+            img {
+                margin-bottom: 20px;
+            }
+            &__text {
+                margin-left: 0;
+                &__rating {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

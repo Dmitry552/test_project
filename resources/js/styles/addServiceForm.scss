@@ -1,0 +1,174 @@
+.add_service {
+    max-width: 500px;
+    .add_service_top {
+        margin-bottom: 40px;
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            h3 {
+                font-family: 'RobotoCondensed', sans-serif;
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 36px;
+                color: #2D2E2E;
+            }
+            img {
+                width: 120px;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #2D2E2E;
+        }
+    }
+    .add_service_form {
+        .dropzone {
+            margin-bottom: 40px;
+            &__block {
+                display: flex;
+                margin-bottom: 20px;
+                &__icon {
+                    img {
+                        width: 72px;
+                    }
+                }
+                &__title {
+                    padding-left: 28px;
+                    margin-left: 20px;
+                    .block_title {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        color: #77838E;
+                        margin-bottom: 12px;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: -28px;
+                            width: 18px;
+
+                        }
+                    }
+                    .block_bottom {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        color: #77838E;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: -28px;
+                            width: 18px;
+
+                        }
+                    }
+                }
+            }
+            &__block.active {
+                border: dashed 1px #77838E;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            &__btn {
+                cursor: pointer;
+                width: 100%;
+                padding: 11px 32px;
+                gap: 4px;
+                border-radius: 8px;
+                border: solid 1px #474B56;
+                background: none;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 20px;
+                color: #2D2E2E;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 15px;
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #2D2E2E;
+        margin-left: 8px;
+        margin-bottom: 4px;
+        span {
+            color: red;
+        }
+    }
+    .add_form_title {
+        margin-bottom: 16px;
+        input {
+            width: 100%;
+            padding: 18px 16px;
+            gap: 4px;
+            border-radius: 8px;
+            border: solid 1px #C3E1FA;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+    .add_form_title.error {
+        input {
+            border: solid 1px red;
+        }
+    }
+    .add_form_details {
+        textarea {
+            width: 100%;
+            height: 144px;
+            padding: 18px 16px;
+            gap: 4px;
+            border-radius: 8px;
+            border: solid 1px #C3E1FA;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+        }
+    }
+    .formik_error {
+        color: red;
+        margin-left: 20px;
+    }
+    .bottom {
+        .button_block {
+            display: flex;
+            justify-content: space-around;
+            gap: 16px;
+            margin-top: 40px;
+            button {
+                padding: 18px 32px;
+                border-radius: 8px;
+                border: 1px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 20px;
+                cursor: pointer;
+                flex: 1;
+            }
+            .btn_clear {
+                border: solid 1px #474B56;
+                background: none;
+                color: #2D2E2E;
+            }
+            .btn_ok {
+                background: #0C93F4;
+                color: white;
+            }
+        }
+    }
+}

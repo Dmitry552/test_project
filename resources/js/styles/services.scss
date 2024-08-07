@@ -1,0 +1,47 @@
+.services_wrapper {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .services {
+        margin: 0 auto;
+        max-width: 1650px;
+        //height: 100px;
+        h1 {
+            font-size: 44px;
+            font-weight: 500;
+            line-height: 64px;
+            letter-spacing: 1px;
+            color: #2D2E2E;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            span {
+                color: #0C93F4;
+            }
+        }
+        &__add {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            cursor: pointer;
+            img {
+                width: 13px;
+                margin-right: 4px;
+                color: #2D2E2E;
+            }
+            button {
+                background: none;
+                border: none;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                color: #0C93F4;
+            }
+        }
+        &__add:hover {
+            button {
+                text-decoration: underline
+            }
+        }
+    }
+}
