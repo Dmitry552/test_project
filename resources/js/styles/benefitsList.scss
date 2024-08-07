@@ -1,4 +1,4 @@
-.wrapper {
+.benefit_wrapper {
     margin: 0 auto;
     max-width: 1650px;
     .benefits {
@@ -33,6 +33,12 @@
                         line-height: 20px;
                     }
                 }
+            }
+        }
+        .benefit .icon {
+            max-width: 700px;
+            img {
+                width: 100%;
             }
         }
         .vector {
@@ -88,7 +94,7 @@
 }
 
 @media screen and (max-width: 1550px) {
-    .wrapper {
+    .benefit_wrapper {
         .benefits {
             .vector {
                 display: none;
@@ -101,7 +107,7 @@
 }
 
 @media screen and (max-width: 1350px) {
-    .wrapper {
+    .benefit_wrapper {
         .benefits {
             gap: 20px;
             .benefit {
@@ -113,6 +119,9 @@
             }
             .benefit.benefit__text {
                 flex-direction: column-reverse;
+            }
+            .text {
+                text-align: center;
             }
         }
         .benefits:last-child {

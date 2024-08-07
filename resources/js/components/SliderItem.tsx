@@ -6,9 +6,11 @@ import star from '../images/icons/Star.svg';
 
 const SliderItem: FC = () => {
     return(
-        <div className="wrapepr">
+        <div className="slider_item_wrapepr">
             <div className="card">
-                <img src={photo} alt="photo"/>
+                <div className="card__img">
+                    <img src={photo} alt="photo"/>
+                </div>
                 <div className="card__text">
                     <div className="card__text__rating">
                         <img src={star} alt="star"/>

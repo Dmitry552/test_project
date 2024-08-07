@@ -71,10 +71,12 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
+            text-align: center;
         }
         &__list {
             flex-wrap: wrap;
             gap: 20px;
+            text-align: center;
             &__line {
                 display: none;
             }

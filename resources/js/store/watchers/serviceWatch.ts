@@ -1,5 +1,5 @@
 import {takeLatest} from 'redux-saga/effects';
-import {serviceTypes as types} from '../actions/types';
+import {serviceTypes as types} from '../reducers/types';
 import {getServices, deleteServices, addServices} from '../sagas/servicesSaga';
 
 export function* watchService() {

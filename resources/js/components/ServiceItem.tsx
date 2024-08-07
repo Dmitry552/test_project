@@ -10,15 +10,13 @@ type TProps = {
 }
 
 const ServiceItem: FC<TProps> = ({service, deleteItem}) => {
-
-    const handlerDelete = () => {
-        deleteItem(service.id);
-    }
-
     return (
         <div className="service">
             <div className="top">
-                <img src={service.icon} alt="icon"/>
+                {service.icon ?
+                    <img src={service.icon} alt="icon"/>
+                    : <div></div>
+                }
                 <h3>{service.title}</h3>
                 <div className="cross" onClick={() => deleteItem(service.id)}>
                     <img className="cross__icon" src={cross} alt="icon"/>

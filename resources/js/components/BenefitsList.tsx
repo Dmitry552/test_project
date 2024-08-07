@@ -5,7 +5,7 @@ import '../styles/benefitsList.scss';
 
 const BenefitsList: FC = () => {
     return(
-        <section className="wrapper">
+        <section className="benefit_wrapper">
             <div className="benefits">
                 <div className="benefit benefit__text">
                     <div className="text">

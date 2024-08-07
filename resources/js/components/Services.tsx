@@ -8,6 +8,7 @@ import '../styles/services.scss';
 
 import background from '../images/backgroundService.png';
 import icon from '../images/icons/plus.svg';
+import {TAddServiceData} from "../types/types";
 
 
 const Services: FC = () => {
@@ -18,7 +19,7 @@ const Services: FC = () => {
         setShowModal(true);
     }
 
-    const handleAddService = (values) => {
+    const handleAddService = (values: TAddServiceData) => {
         dispatch(addService(values));
         setShowModal(false);
     }

@@ -8,10 +8,11 @@ import iconFolder from '../images/icons/iconFolder.svg';
 import iconDropZone from '../images/icons/iconDropZone.svg';
 import iconAttention from '../images/icons/iconAttention.svg';
 import iconClip from '../images/icons/iconClip.svg';
+import {TAddServiceData} from "../types/types";
 
 type TProps = {
     setShowModal: (value: boolean) => void
-    addService: (values) => void
+    addService: (values: TAddServiceData) => void
 }
 
 const AddServiceForm: FC<TProps> = ({setShowModal, addService}) => {
@@ -21,23 +22,22 @@ const AddServiceForm: FC<TProps> = ({setShowModal, addService}) => {
         noKeyboard: true
     });
 
-    const formik = useFormik({
+    const formik = useFormik<TAddServiceData>({
         initialValues: {
             title: '',
-            details: '',
+            description: '',
         },
         validationSchema: Yup.object({
             title: Yup.string().required('Required'),
             details: Yup.string().min(3,'Invalid details')
         }),
-        onSubmit: (values, {resetForm}) => {
+        onSubmit: (values: TAddServiceData, {resetForm}) => {
             handleAddService(values);
             resetForm()
         },
     });
 
-    const handleAddService = (values) => {
-        console.log();
+    const handleAddService = (values: TAddServiceData) => {
         addService(values);
     }
 
@@ -95,16 +95,16 @@ const AddServiceForm: FC<TProps> = ({setShowModal, addService}) => {
                     />
                     <span className="formik_error">{formik.errors.title}</span>
                 </div>
-                <div className={formik.errors.details ? "add_form_details error" : "add_form_details"}>
-                    <label htmlFor="details">Details (Optional)</label>
+                <div className={formik.errors.description ? "add_form_details error" : "add_form_details"}>
+                    <label htmlFor="description">Details (Optional)</label>
                     <textarea
-                        id="details"
-                        name="details"
+                        id="description"
+                        name="description"
                         placeholder="BRUTIS GmbH"
                         onChange={formik.handleChange}
-                        value={formik.values.details}
+                        value={formik.values.description}
                     />
-                    <span className="formik_error">{formik.errors.details}</span>
+                    <span className="formik_error">{formik.errors.description}</span>
                 </div>
                 <div className="bottom">
                     <div className="button_block">

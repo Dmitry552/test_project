@@ -6,7 +6,6 @@
     .services {
         margin: 0 auto;
         max-width: 1650px;
-        //height: 100px;
         h1 {
             font-size: 44px;
             font-weight: 500;
@@ -41,6 +40,16 @@
         &__add:hover {
             button {
                 text-decoration: underline
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .services_wrapper {
+        .services {
+            h1 {
+                text-align: center;
             }
         }
     }

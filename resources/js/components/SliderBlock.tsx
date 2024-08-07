@@ -11,7 +11,7 @@ import '../styles/sliderBlock.scss';
 
 const SliderBlock: FC = () => {
     return(
-        <section className="wrapper">
+        <section className="slider_wrapper">
             <div className="top">
                 <p>
                     Erfolgsgeschichten

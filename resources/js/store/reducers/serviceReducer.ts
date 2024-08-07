@@ -1,6 +1,11 @@
-import {serviceTypes as types} from '../actions/types';
+import {serviceTypes as types} from './types';
+import {TAddServiceData, TService} from "../../types/types";
 
-const initialState = {
+
+type TServiceState = {
+    services: TService[]
+}
+const initialState: TServiceState = {
   services: [],
 }
 
@@ -30,7 +35,7 @@ const serviceReducer = (state = initialState, actions) => {
 }
 
 export const getServices = () => ({type: types.GET_SERVICE});
-export const deleteService = (id) => ({type: types.DELETE_SERVICE, payload: id});
-export const addService = (data) => ({type: types.ADD_SERVICE, payload: data});
+export const deleteService = (id: number) => ({type: types.DELETE_SERVICE, payload: id});
+export const addService = (data: TAddServiceData) => ({type: types.ADD_SERVICE, payload: data});
 
 export default serviceReducer;

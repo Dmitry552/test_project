@@ -1,9 +1,12 @@
+export interface IGetServices {
+    data: IGetService[]
+}
 
-export const serviceTypes = {
-  GET_SERVICE: 'GET_SERVICE',
-  GET_SERVICE_SUCCESS: 'GET_SERVICE_SUCCESS',
-  ADD_SERVICE: 'ADD_SERVICE',
-  ADD_SERVICE_SUCCESS: 'ADD_SERVICE_SUCCESS',
-  DELETE_SERVICE: 'DELETE_SERVICE',
-  DELETE_SERVICE_SUCCESS: 'DELETE_SERVICE_SUCCESS',
+export interface IGetService {
+    id: number
+    title: string
+    description: string
+    icon: string | null
+    created_at: string
+    updated_at: string
 }
